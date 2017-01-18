@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.weatherapp.Datalist"
+    android:background="#9966CC">
+
+    <!-- z pola edit text bedzie pobierana wartosc i zapisywana w bazie danych-->
+    <EditText
+        android:id="@+id/editTextNote"
+        android:hint="Podaj treść notatki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- po nacisnieciu tego przycisku zostanie zapisana notatka -->
+    <Button
+        android:id="@+id/buttonSaveNote"
+        android:text="Dodaj notatkę"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- nagłówek -->
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Notatki:"
+        android:paddingBottom="20dp"/>
+
+    <!-- lista pokazujaca wszystkie rekordy z sqlite -->
+    <ListView
+        android:id="@+id/listViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>

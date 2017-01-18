@@ -2,14 +2,19 @@ package com.example.weatherapp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button database = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.container, new WeatherFragment())
                     .commit();
         }
+
+        database = (Button)findViewById(R.id.database);
 
     }
 
@@ -41,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.change_city) {
             showInputDialog();
+        }
+        if (id == R.id.database) {
+            Intent intent = new Intent(MainActivity.this, Datalist.class);
+            startActivity(intent);
         }
         return false;
     }

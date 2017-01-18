@@ -7,5 +7,10 @@
         android:title="@string/change_city"
         android:orderInCategory="1"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/database"
+        android:title="@string/database"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
 
 </menu>
